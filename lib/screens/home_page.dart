@@ -29,30 +29,6 @@ class FacebookHome extends StatelessWidget {
             padding: const EdgeInsets.only(top: AppPadding.p8),
             child: Scaffold(
               backgroundColor: ColorManger.facebookBody,
-              appBar: AppBar(
-                backgroundColor:ColorManger.facebookBody,
-                title: Text( AppStrings.facebook,style: TextStyle(color: ColorManger.primaryColor3,fontSize: AppSize.s30), ),
-                actions: [
-                  CircleAvatar(
-                    backgroundColor: ColorManger.facebookPost,
-                    child:  IconButton(onPressed: (){
-                    }, icon:  Icon(Icons.search,size: AppSize.s30,color: ColorManger.primaryColor3,)),
-                  ),
-                  const SizedBox(width: AppSize.s20,),
-                  CircleAvatar(
-
-                    backgroundColor: ColorManger.facebookPost,
-                    child:   InkWell(
-                      onTap: (){
-                      },
-                      child: const Image(image: AssetImage(AssetImageManger.iconMessanger,),fit: BoxFit.cover,width: AppSize.s60,height: AppSize.s60
-                        ,),
-                    ),
-                  )
-                ],
-
-
-              ),
 
               body:
               SingleChildScrollView(
@@ -68,7 +44,7 @@ class FacebookHome extends StatelessWidget {
                         CircleAvatar(
                           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                           child:  const CircleAvatar(
-                            backgroundImage: AssetImage(AssetImageManger.profile),
+                            backgroundImage: AssetImage(AssetImageManger.tower),
                           ),
                         ),
 
@@ -122,7 +98,7 @@ class FacebookHome extends StatelessWidget {
                                               borderRadius:  BorderRadius.all(
                                                   Radius.circular(20)
                                               ),
-                                              image: DecorationImage(image:AssetImage(AssetImageManger.profile ),
+                                              image: DecorationImage(image:AssetImage(AssetImageManger.tower ),
                                                 fit: BoxFit.fill,
 
                                               )
@@ -179,7 +155,7 @@ class FacebookHome extends StatelessWidget {
                                                 borderRadius:  BorderRadius.all(
                                                     Radius.circular(20)
                                                 ),
-                                                image: DecorationImage(image:AssetImage(AssetImageManger.story2 ),
+                                                image: DecorationImage(image:AssetImage(AssetImageManger.tower ),
                                                   fit: BoxFit.fill,
 
                                                 )
@@ -216,7 +192,7 @@ class FacebookHome extends StatelessWidget {
                                         child: CircleAvatar(
                                           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                                           child:  const CircleAvatar(
-                                            backgroundImage: AssetImage(AssetImageManger.profile),
+                                            backgroundImage: AssetImage(AssetImageManger.tower),
                                           ),
                                         ),
                                       ),
@@ -250,119 +226,12 @@ class FacebookHome extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 12.0),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Expanded(child: Text("  اخواتى",style: TextStyle(color: ColorManger.primaryColor3,fontSize: 18,),textAlign: TextAlign.left)),
-                                    ],
-                                  ),
-                                ),
 
                                 const SizedBox(height: AppPadding.p10,),
                                 InkWell(child: Image.asset(AssetImageManger.tower,fit: BoxFit.cover),onTap: (){},),
                                 const SizedBox(height: AppPadding.p10,),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: AppPadding.p10),
-                                  child: Row(
-                                    children: [
-                                      InkWell(
-                                        onTap:() {},
-                                        child: CircleAvatar(radius: AppSize.s12,
-                                          //backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                                          child:   CircleAvatar(radius: AppSize.s14,
-                                            backgroundColor: ColorManger.primaryColor1,
-                                            child: Image(
-                                              image: const AssetImage(AssetImageManger.like),
-                                              color: ColorManger.primaryColor3,
-                                              fit: BoxFit.cover,
-                                              width: AppSize.s20,
-                                              height: AppSize.s20,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      InkWell(
-                                        onTap: (){},
-                                        child: const CircleAvatar(radius: AppSize.s12,
-                                          child:   CircleAvatar(
-                                              radius: AppSize.s14,
-                                              backgroundColor: Colors.red,
-                                              child: Icon(
-                                                Icons.favorite,size: AppSize.s16,
-                                                color: Colors.white,
-
-                                              )
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(width: AppPadding.p10),
-                                      showText(text: "500", color: ColorManger.primaryColor2),
-                                      const Spacer(),
-                                      InkWell(
-                                          onTap: (){},
-                                          child: showText(text: "50 comments ", color: ColorManger.primaryColor2)),
-                                      InkWell(
-                                          onTap: (){},
-                                          child: showText(text: ".20 shares", color: ColorManger.primaryColor2)),
-
-
-                                    ],
-                                  ),
-                                ),
                                 const SizedBox(height:AppPadding.p10 ),
                                 Container(height: AppSize.s2, color: ColorManger.facebookPost2,),
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: InkWell(
-                                        onTap: (){},
-                                        child: Row(
-                                          children: [
-                                            Image(
-                                              image: const AssetImage(AssetImageManger.like),width: AppSize.s50,height: AppSize.s40,color: ColorManger.primaryColor2,
-
-                                            ),
-                                            showText(text: "Like", color: ColorManger.primaryColor2),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: InkWell(
-                                        onTap: (){},
-                                        child: Row(
-                                          children: [
-                                            Image(
-                                              image: const AssetImage(AssetImageManger.comment),width: AppSize.s50,height: AppSize.s40,color: ColorManger.primaryColor2,
-
-                                            ),
-                                            showText(text: "Comment", color: ColorManger.primaryColor2),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(width: AppSize.s40),
-                                    Expanded(
-                                      child: InkWell(
-                                        onTap: (){},
-                                        child: Row(
-                                          children: [
-                                            Image(
-                                              image: const AssetImage(AssetImageManger.share),width: AppSize.s50,height: AppSize.s40,color: ColorManger.primaryColor2,
-
-                                            ),
-                                            showText(text: "Share", color: ColorManger.primaryColor2),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-
-
-
-                                  ],
-                                )
 
 
 
@@ -380,18 +249,6 @@ class FacebookHome extends StatelessWidget {
               ),
 
 
-              bottomNavigationBar: BottomNavigationBar(
-                items: FacebookHomeCubit.get(context).bottomItem,
-                currentIndex: FacebookHomeCubit.get(context).currentIndex,
-                selectedItemColor: ColorManger.primaryColor1,
-                unselectedItemColor: ColorManger.primaryColor3,
-                type: BottomNavigationBarType.fixed, // Fixed
-                backgroundColor: ColorManger.facebookBody,
-                elevation: AppSize.s20,
-                onTap: (index){
-                },
-
-              ),
 
 
             ),

@@ -12,6 +12,7 @@ import '../resources/constant.dart';
 import '../resources/marign.dart';
 import '../resources/stringmanger.dart';
 import '../resources/widgets.dart';
+import 'home_page.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -129,6 +130,7 @@ class LoginScreen extends StatelessWidget {
                             condition: state is !CuraLoginGoogleLoadingState,
                             builder: (context)=>MaterialButton(
                                 onPressed: (){
+                                  navigatorTo(context, const FacebookHome());
                                 },
                                 child:showContainer(width: double.infinity,
                                     height: 60,
