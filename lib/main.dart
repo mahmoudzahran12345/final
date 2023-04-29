@@ -1,11 +1,17 @@
+import 'package:bloc/bloc.dart';
 import 'package:finilproject/screens/Splach.dart';
 import 'package:flutter/material.dart';
 
+import 'models/bloc.dart';
+
 void main() {
+  Bloc.observer = MyBlocObserver();
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
