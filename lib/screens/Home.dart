@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
             padding:  EdgeInsets.only(left: 20.0,right: 20.0),
             child: InkWell(
               onTap: (){
-                navigatorTo(context, LoginScreen);
+                navigatorTo(context, LoginScreen());
               },
               child: showContainer(width: double.infinity,
                   height: 60,

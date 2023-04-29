@@ -21,7 +21,7 @@ class SplashScreen extends StatelessWidget {
               style:   const TextStyle(
                   fontSize: 30.0,
                   fontFamily: 'Canterbury',
-                  color: pramcolor,
+                  color: Colors.blue,
                   fontWeight: FontWeight.bold
               ),
               child: AnimatedTextKit(
@@ -51,7 +51,7 @@ class SplashScreen extends StatelessWidget {
                           image: AssetImage('assets/Images/logo.png'),
                           width: 350,
                           height: 250,
-                          color: pramcolor,
+                          color: Colors.blue,
                         ) ,
                         Text('Cura App',textAlign: TextAlign.center,style: TextStyle(color: seccolor,fontSize: 30),)
 

@@ -1,4 +1,4 @@
-const String assetPath = "assets/images";
+const String assetPath = "assets/Images";
 class AssetImageManger{
   static const  String facebookLogin = "$assetPath/metafacebook.jpg";
   static const String facebookRegister = "$assetPath/register.jpg";
