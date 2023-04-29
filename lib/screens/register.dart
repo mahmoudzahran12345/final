@@ -112,7 +112,6 @@ class RegisterScreen extends StatelessWidget {
                             builder: (context)=>MaterialButton(
                                 onPressed: (){
                                   if(formKeyRegister.currentState!.validate()){
-
                                   }
 
                                 },

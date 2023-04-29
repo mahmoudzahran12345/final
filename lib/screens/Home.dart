@@ -1,4 +1,5 @@
 import 'package:finilproject/screens/login.dart';
+import 'package:finilproject/screens/register.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -81,15 +82,21 @@ class Home extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10.0,),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0,right: 20.0,bottom: 20.0),
-            child: showContainer(width: double.infinity,
-                height: 60,
-                colorDecoration: ColorManger.primaryColor1,
-                textColor: ColorManger.primaryColor3,
-                text: AppStrings.createAccount,
-                size: AppSize.s20,
-                border: 20.0
+          InkWell(
+            onTap: (){
+              navigatorTo(context, RegisterScreen());
+
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20.0,right: 20.0,bottom: 20.0),
+              child: showContainer(width: double.infinity,
+                  height: 60,
+                  colorDecoration: ColorManger.primaryColor1,
+                  textColor: ColorManger.primaryColor3,
+                  text: AppStrings.createAccount,
+                  size: AppSize.s20,
+                  border: 20.0
+              ),
             ),
           )
 

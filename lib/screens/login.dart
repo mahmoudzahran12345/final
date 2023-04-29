@@ -1,4 +1,5 @@
 import 'package:conditional_builder/conditional_builder.dart';
+import 'package:finilproject/screens/register.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -147,6 +148,8 @@ class LoginScreen extends StatelessWidget {
                             condition: true,
                             builder: (context)=>MaterialButton(
                                 onPressed: (){
+                                  navigatorTo(context, RegisterScreen());
+
                                 },
                                 child:showContainer(width: double.infinity,
                                     height: 60,
